@@ -1,0 +1,165 @@
+{
+  "server_gate": {
+    "lang": "ar",
+    "something_went_wrong_please_try_again": "حدث خطأ ، يرجى المحاولة مرة اخرى",
+    "poor_connection_check_the_quality_of_the_internet": "تحقق من جودة الانترنت",
+    "please_check_your_internet_connection": "يرجى التحقق من الاتصال بالانترنت"
+  },
+  "home": {
+    "title": "Welcome to the Real Estate App",
+    "explore_now": "Explore Now",
+    "categories": "Categories",
+    "apartments": "Apartments",
+    "villas": "Villas",
+    "lands": "Lands",
+    "commercial_properties": "Commercial Properties",
+    "view_all": "View All",
+    "search_placeholder": "Search for a property..."
+  },
+  "search": {
+    "search_by_location": "Search by Location",
+    "filter_by_price": "Filter by Price",
+    "filter_by_type": "Filter by Type",
+    "filter_by_bedrooms": "Filter by Bedrooms",
+    "filter_by_bathrooms": "Filter by Bathrooms",
+    "filter_by_area": "Filter by Area",
+    "apply_filters": "Apply Filters",
+    "reset_filters": "Reset Filters",
+    "no_results_found": "No results found.",
+    "try_another_keyword": "Try another keyword."
+  },
+  "propertyDetails": {
+    "property_details": "Property Details",
+    "description": "Description",
+    "price": "Price",
+    "location": "Location",
+    "bedrooms": "Bedrooms",
+    "bathrooms": "Bathrooms",
+    "area": "Area",
+    "amenities": "Amenities",
+    "furnished": "Furnished",
+    "not_furnished": "Not Furnished",
+    "contact_seller": "Contact Seller",
+    "add_to_favorites": "Add to Favorites",
+    "remove_from_favorites": "Remove from Favorites"
+  },
+  "favorites": {
+    "title": "Favorites",
+    "empty_favorites": "No properties in favorites.",
+    "start_exploring": "Start exploring properties now!"
+  },
+  "profile": {
+    "title": "Profile",
+    "edit_profile": "Edit Profile",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "change_password": "Change Password",
+    "logout": "Logout"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "change_language": "Change Language",
+    "notifications": "Notifications",
+    "enable_notifications": "Enable Notifications",
+    "disable_notifications": "Disable Notifications",
+    "dark_mode": "Dark Mode",
+    "light_mode": "Light Mode",
+    "privacy_policy": "Privacy Policy",
+    "terms_conditions": "Terms & Conditions"
+  },
+  "auth": {
+    "session_expired": "انتهت جلسة تسجيل الدخول",
+    "title": "Login",
+    "title_sign_up": "Sign Up",
+    "sub_title_sign_up": "أنشئ حسابك الأن على  عقاراتي",
+    "sub_title_sign_in": "تمتع بتجربة فريدة مع تطبيق عقاراتي",
+    "forgot_password": "Forgot Password?",
+    "login_button": "Login",
+    "dont_have_account": "Don't have an account?",
+    "signup_link": "Sign Up",
+    "or_continue_with": "Or continue with",
+    "sign_in_with_google": "Sign in with Google",
+    "sign_in_with_facebook": "Sign in with Facebook",
+    "invalid_email_error": "Invalid email address.",
+    "login_failed": "Login failed, please try again.",
+    "subtitle": "Start your journey with us!",
+    "name_placeholder": "Full Name",
+    "email_placeholder": "Email",
+    "password_placeholder": "Password",
+    "confirm_password_placeholder": "Confirm Password",
+    "phone_placeholder": "Phone Number",
+    "terms_conditions": "By signing up, you agree to our ",
+    "terms_conditions_link": "Terms & Conditions",
+    "privacy_policy": "Privacy Policy",
+    "signup_button": "Sign Up",
+    "already_have_account": "Already have an account?",
+    "login_link": "Login",
+    "name_required_error": "Full name is required.",
+    "email_required_error": "Email is required.",
+    "password_required_error": "Password is required.",
+    "confirm_password_required_error": "Confirm password is required.",
+    "phone_required_error": "Phone number is required.",
+    "passwords_mismatch_error": "Passwords do not match.",
+    "account_created_successfully": "Account created successfully."
+  },
+  "resetPassword": {
+    "title": "Reset Password",
+    "subtitle": "Enter your email to reset your password.",
+    "email_placeholder": "Email",
+    "send_reset_link": "Send Reset Link",
+    "back_to_login": "Back to Login",
+    "reset_link_sent": "Reset link has been sent to your email.",
+    "email_not_found": "Email not found."
+  },
+  "notifications": {
+    "new_property_added": "A new property has been added!",
+    "promotion_alert": "Special offer: Discount on properties today only!",
+    "order_confirmed": "Your order has been confirmed successfully.",
+    "property_sold": "The property has been sold.",
+    "property_reserved": "The property has been reserved.",
+    "property_available": "The property is now available."
+  },
+  "errors": {
+    "invalid_email": "Invalid email address.",
+    "password_too_short": "Password is too short.",
+    "invalid_credentials": "Invalid login credentials.",
+    "network_error": "Network error.",
+    "check_internet_connection": "Please check your internet connection.",
+    "something_went_wrong": "Something went wrong.",
+    "server_error": "Server error, please try again later.",
+    "timeout_error": "Request timed out, please try again.",
+    "unknown_error": "An unknown error occurred."
+  },
+  "propertyListing": {
+    "list_your_property": "List Your Property for Sale or Rent",
+    "property_type": "Property Type",
+    "property_location": "Property Location",
+    "property_price": "Property Price",
+    "property_description": "Property Description",
+    "upload_photos": "Upload Photos",
+    "submit_listing": "Submit Listing",
+    "listing_submitted": "Your listing has been submitted successfully.",
+    "listing_failed": "Failed to submit listing, please try again."
+  },
+  "contactUs": {
+    "title": "Contact Us",
+    "message_placeholder": "Write your message here...",
+    "send_message": "Send Message",
+    "message_sent": "Your message has been sent successfully.",
+    "message_failed": "Failed to send message, please try again."
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "description": "We provide the best real estate solutions to help you find your dream home.",
+    "mission": "Our mission is to provide a seamless and easy experience for property search.",
+    "vision": "Our vision is to become the first choice for real estate in the region."
+  },
+  "legal": {
+    "privacy_policy": "Privacy Policy",
+    "terms_conditions": "Terms & Conditions",
+    "cookie_policy": "Cookie Policy",
+    "disclaimer": "Disclaimer"
+  }
+}

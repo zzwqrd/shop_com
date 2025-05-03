@@ -1,0 +1,165 @@
+{
+  "server_gate": {
+    "lang": "ar",
+    "something_went_wrong_please_try_again": "حدث خطأ ، يرجى المحاولة مرة اخرى",
+    "poor_connection_check_the_quality_of_the_internet": "تحقق من جودة الانترنت",
+    "please_check_your_internet_connection": "يرجى التحقق من الاتصال بالانترنت"
+  },
+  "home": {
+    "title": "مرحبًا بك في تطبيق العقارات",
+    "explore_now": "استكشف الآن",
+    "categories": "الفئات",
+    "apartments": "شقق",
+    "villas": "فلل",
+    "lands": "أراضي",
+    "commercial_properties": "عقارات تجارية",
+    "view_all": "عرض الكل",
+    "search_placeholder": "ابحث عن عقار..."
+  },
+  "search": {
+    "search_by_location": "البحث حسب الموقع",
+    "filter_by_price": "تصفية حسب السعر",
+    "filter_by_type": "تصفية حسب النوع",
+    "filter_by_bedrooms": "تصفية حسب عدد الغرف",
+    "filter_by_bathrooms": "تصفية حسب عدد الحمامات",
+    "filter_by_area": "تصفية حسب المساحة",
+    "apply_filters": "تطبيق التصفية",
+    "reset_filters": "إعادة التعيين",
+    "no_results_found": "لم يتم العثور على نتائج.",
+    "try_another_keyword": "جرب كلمة مفتاحية أخرى."
+  },
+  "propertyDetails": {
+    "property_details": "تفاصيل العقار",
+    "description": "الوصف",
+    "price": "السعر",
+    "location": "الموقع",
+    "bedrooms": "عدد الغرف",
+    "bathrooms": "عدد الحمامات",
+    "area": "المساحة",
+    "amenities": "المرافق",
+    "furnished": "مفروش",
+    "not_furnished": "غير مفروش",
+    "contact_seller": "تواصل مع البائع",
+    "add_to_favorites": "إضافة إلى المفضلة",
+    "remove_from_favorites": "إزالة من المفضلة"
+  },
+  "favorites": {
+    "title": "المفضلة",
+    "empty_favorites": "لا توجد عقارات في المفضلة.",
+    "start_exploring": "ابدأ استكشاف العقارات الآن!"
+  },
+  "profile": {
+    "title": "الملف الشخصي",
+    "edit_profile": "تعديل الملف الشخصي",
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "phone": "رقم الهاتف",
+    "change_password": "تغيير كلمة المرور",
+    "logout": "تسجيل الخروج"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "language": "اللغة",
+    "change_language": "تغيير اللغة",
+    "notifications": "الإشعارات",
+    "enable_notifications": "تفعيل الإشعارات",
+    "disable_notifications": "تعطيل الإشعارات",
+    "dark_mode": "الوضع المظلم",
+    "light_mode": "الوضع الفاتح",
+    "privacy_policy": "سياسة الخصوصية",
+    "terms_conditions": "الشروط والأحكام"
+  },
+  "auth": {
+    "session_expired": "انتهت جلسة تسجيل الدخول",
+    "title": "تسجيل الدخول",
+    "title_sign_up": "إنشاء حساب",
+    "sub_title_sign_up": "أنشئ حسابك الأن على  عقاراتي",
+    "sub_title_sign_in": ".تسجيل الدخول لمتابعة التسوق",
+    "subtitle": "مرحبًا بك مرة أخرى!",
+    "email_placeholder": "البريد الإلكتروني",
+    "forgot_password": "نسيت كلمة المرور؟",
+    "login_button": "تسجيل الدخول",
+    "dont_have_account": "ليس لديك حساب؟",
+    "signup_link": "إنشاء حساب",
+    "or_continue_with": "أو استمر باستخدام",
+    "sign_in_with_google": "تسجيل الدخول باستخدام Google",
+    "sign_in_with_facebook": "تسجيل الدخول باستخدام Facebook",
+    "invalid_email_error": "البريد الإلكتروني غير صحيح.",
+    "login_failed": "فشل تسجيل الدخول، يرجى المحاولة مرة أخرى.",
+    "name_placeholder": "الاسم الكامل",
+    "password_placeholder": "كلمة المرور",
+    "confirm_password_placeholder": "تأكيد كلمة المرور",
+    "phone_placeholder": "رقم الهاتف",
+    "terms_conditions": "بالتسجيل، أنت توافق على ",
+    "terms_conditions_link": "الشروط والأحكام",
+    "privacy_policy": "سياسة الخصوصية",
+    "signup_button": "إنشاء حساب",
+    "already_have_account": "هل لديك حساب بالفعل؟",
+    "login_link": "تسجيل الدخول",
+    "name_required_error": "الاسم الكامل مطلوب.",
+    "email_required_error": "البريد الإلكتروني مطلوب.",
+    "password_required_error": "كلمة المرور مطلوبة.",
+    "confirm_password_required_error": "تأكيد كلمة المرور مطلوب.",
+    "phone_required_error": "رقم الهاتف مطلوب.",
+    "passwords_mismatch_error": "كلمتا المرور لا تتطابقان.",
+    "account_created_successfully": "تم إنشاء الحساب بنجاح."
+  },
+  "resetPassword": {
+    "title": "إعادة تعيين كلمة المرور",
+    "subtitle": "أدخل بريدك الإلكتروني لإعادة تعيين كلمة المرور.",
+    "email_placeholder": "البريد الإلكتروني",
+    "send_reset_link": "إرسال رابط إعادة التعيين",
+    "back_to_login": "العودة إلى تسجيل الدخول",
+    "reset_link_sent": "تم إرسال رابط إعادة التعيين إلى بريدك الإلكتروني.",
+    "email_not_found": "لم يتم العثور على البريد الإلكتروني."
+  },
+  "notifications": {
+    "new_property_added": "تمت إضافة عقار جديد!",
+    "promotion_alert": "عرض خاص: خصم على العقارات اليوم فقط!",
+    "order_confirmed": "تم تأكيد طلبك بنجاح.",
+    "property_sold": "تم بيع العقار.",
+    "property_reserved": "تم حجز العقار.",
+    "property_available": "العقار متاح الآن."
+  },
+  "errors": {
+    "invalid_email": "البريد الإلكتروني غير صحيح.",
+    "password_too_short": "كلمة المرور قصيرة جدًا.",
+    "invalid_credentials": "بيانات تسجيل الدخول غير صحيحة.",
+    "network_error": "خطأ في الاتصال بالشبكة.",
+    "check_internet_connection": "تحقق من اتصالك بالإنترنت.",
+    "something_went_wrong": "حدث خطأ ما.",
+    "server_error": "خطأ في الخادم، يرجى المحاولة لاحقًا.",
+    "timeout_error": "انتهت مهلة الطلب، يرجى المحاولة مرة أخرى.",
+    "unknown_error": "حدث خطأ غير معروف."
+  },
+  "propertyListing": {
+    "list_your_property": "عرض عقارك للبيع أو الإيجار",
+    "property_type": "نوع العقار",
+    "property_location": "موقع العقار",
+    "property_price": "سعر العقار",
+    "property_description": "وصف العقار",
+    "upload_photos": "رفع الصور",
+    "submit_listing": "إرسال الإعلان",
+    "listing_submitted": "تم إرسال إعلانك بنجاح.",
+    "listing_failed": "فشل إرسال الإعلان، يرجى المحاولة مرة أخرى."
+  },
+  "contactUs": {
+    "title": "تواصل معنا",
+    "message_placeholder": "اكتب رسالتك هنا...",
+    "send_message": "إرسال الرسالة",
+    "message_sent": "تم إرسال رسالتك بنجاح.",
+    "message_failed": "فشل إرسال الرسالة، يرجى المحاولة مرة أخرى."
+  },
+  "aboutUs": {
+    "title": "من نحن",
+    "description": "نحن نقدم أفضل الحلول العقارية لمساعدتك في العثور على المنزل الذي تحلم به.",
+    "mission": "مهمتنا هي توفير تجربة سلسة وسهلة للبحث عن العقارات.",
+    "vision": "رؤيتنا هي أن نصبح الخيار الأول للعقارات في المنطقة."
+  },
+  "legal": {
+    "privacy_policy": "سياسة الخصوصية",
+    "terms_conditions": "الشروط والأحكام",
+    "cookie_policy": "سياسة ملفات تعريف الارتباط",
+    "disclaimer": "إخلاء المسؤولية"
+  }
+}
