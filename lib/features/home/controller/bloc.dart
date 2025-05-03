@@ -14,6 +14,10 @@ class HomeController extends Cubit<HomeState> {
 
   HomeModel? model;
 
+  List<Banners> banners = [];
+  List<Category> categories = [];
+  List<Ads> ads = [];
+
   Future<void> getData() async {
     emit(state.copyWith(requestState: RequestState.loading));
 
@@ -27,7 +31,23 @@ class HomeController extends Cubit<HomeState> {
       },
       (success) {
         model = success;
-        emit(state.copyWith(requestState: RequestState.done));
+        banners = success.data!.banners;
+        categories = success.data!.categories;
+        ads = success.data!.ads;
+
+        if (banners.isEmpty) {
+          emit(state.copyWith(
+              requestState: RequestState.empty,
+              msg: 'No data available',
+              errorType: ErrorType.empty));
+        } else {
+          emit(state.copyWith(
+              requestState: RequestState.done,
+              msg: '',
+              errorType: ErrorType.none));
+        }
+
+        // emit(state.copyWith(requestState: RequestState.done));
       },
     );
   }

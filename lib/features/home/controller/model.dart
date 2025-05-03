@@ -32,8 +32,8 @@ class Data extends Equatable {
     required this.justForYou,
   });
 
-  final List<Ad> banners;
-  final List<Ad> ads;
+  final List<Banners> banners;
+  final List<Ads> ads;
   final List<Category> categories;
   final List<Product> popularProducts;
   final JustForYou? justForYou;
@@ -42,10 +42,11 @@ class Data extends Equatable {
     return Data(
       banners: json["banners"] == null
           ? []
-          : List<Ad>.from(json["banners"]!.map((x) => Ad.fromJson(x))),
+          : List<Banners>.from(
+              json["banners"]!.map((x) => Banners.fromJson(x))),
       ads: json["ads"] == null
           ? []
-          : List<Ad>.from(json["ads"]!.map((x) => Ad.fromJson(x))),
+          : List<Ads>.from(json["ads"]!.map((x) => Ads.fromJson(x))),
       categories: json["categories"] == null
           ? []
           : List<Category>.from(
@@ -70,8 +71,8 @@ class Data extends Equatable {
       ];
 }
 
-class Ad extends Equatable {
-  const Ad({
+class Banners extends Equatable {
+  const Banners({
     required this.id,
     required this.title,
     required this.thumbnail,
@@ -81,8 +82,35 @@ class Ad extends Equatable {
   final String title;
   final String thumbnail;
 
-  factory Ad.fromJson(Map<String, dynamic> json) {
-    return Ad(
+  factory Banners.fromJson(Map<String, dynamic> json) {
+    return Banners(
+      id: json["id"] ?? 0,
+      title: json["title"] ?? "",
+      thumbnail: json["thumbnail"] ?? "",
+    );
+  }
+
+  @override
+  List<Object?> get props => [
+        id,
+        title,
+        thumbnail,
+      ];
+}
+
+class Ads extends Equatable {
+  const Ads({
+    required this.id,
+    required this.title,
+    required this.thumbnail,
+  });
+
+  final int id;
+  final String title;
+  final String thumbnail;
+
+  factory Ads.fromJson(Map<String, dynamic> json) {
+    return Ads(
       id: json["id"] ?? 0,
       title: json["title"] ?? "",
       thumbnail: json["thumbnail"] ?? "",
