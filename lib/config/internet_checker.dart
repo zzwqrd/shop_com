@@ -3,7 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 
-import '../../core/utils/flash_helper.dart'; // تعديل حسب مشروعك
+import '../../core/utils/flash_helper.dart';
+import '../core/routes/app_routes_fun.dart';
+import '../core/routes/routes.dart'; // تعديل حسب مشروعك
 
 class InternetChecker {
   final _logger = LoggerDebugInternet(
@@ -42,6 +44,7 @@ class InternetChecker {
       'please check your internet connection', // أو استخدم نص ثابت إذا لم تستخدم EasyLocalization
       type: MessageTypeTost.fail,
     );
+    FlashHelper.showToast("No Internet", type: MessageTypeTost.warning);
 
     // يمكنك استخدام showModalBottomSheet أو Navigator.push
     // مثال باستخدام pushAndRemoveUntil كما في مشروعك:
@@ -55,9 +58,11 @@ class InternetChecker {
       _logger.green("Internet status changed: $status");
 
       if (!isConnected) {
+        FlashHelper.showToast("No Internet", type: MessageTypeTost.warning);
+
         // pushAndRemoveUntil(NamedRoutes.i.internet);
       } else {
-        // pushAndRemoveUntil(NamedRoutes.i.splash);
+        pushAndRemoveUntil(NamedRoutes.i.splash);
       }
     });
   }

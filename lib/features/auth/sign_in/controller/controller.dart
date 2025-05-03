@@ -1,13 +1,17 @@
-import 'package:ali_com/core/services/dio_services.dart';
-import 'package:ali_com/core/utils/flash_helper.dart';
-import 'package:ali_com/features/auth/sign_in/controller/model.dart';
-import 'package:ali_com/features/auth/sign_in/controller/send_data.dart';
-import 'package:ali_com/features/auth/sign_in/controller/state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/routes/app_routes_fun.dart';
+import '../../../../core/routes/routes.dart';
+import '../../../../core/services/dio_services.dart';
+import '../../../../core/services/helper_respons.dart';
 import '../../../../core/utils/constant.dart';
 import '../../../../core/utils/enums.dart';
+import '../../../../core/utils/extensions.dart';
+import '../../../../core/utils/flash_helper.dart';
+import '../../../../features/auth/sign_in/controller/model.dart';
+import '../../../../features/auth/sign_in/controller/send_data.dart';
+import '../../../../features/auth/sign_in/controller/state.dart';
 
 class LoginController extends Cubit<LoginState> {
   LoginController() : super(LoginState());
@@ -24,6 +28,7 @@ class LoginController extends Cubit<LoginState> {
   }
 
   void login() async {
+    if (formKey.isValid) {}
     emit(state.copyWith(requestState: RequestState.loading));
 
     HelperResponse response = await DioServices.instance.post(
@@ -35,7 +40,7 @@ class LoginController extends Cubit<LoginState> {
       FlashHelper.showToast(response.message, type: MessageTypeTost.success);
       final userModel = UserModel.fromJson(response.data);
       await userModel.save();
-
+      pushAndRemoveUntil(NamedRoutes.i.layout);
       emit(state.copyWith(requestState: RequestState.done));
     } else {
       FlashHelper.showToast(response.message, type: MessageTypeTost.fail);

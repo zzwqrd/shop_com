@@ -28,7 +28,7 @@ class AppBarWidget extends StatelessWidget {
       leading: Padding(
         padding: EdgeInsets.only(left: 16.w, right: 16.w),
         child: CustomImage(
-          Assets.icons.logo,
+          Assets.icons.appLogo,
           height: 20.h,
           width: 73.w,
         ),
