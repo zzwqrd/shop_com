@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../home/pages/view.dart';
 import 'event.dart';
 import 'state.dart';
 
@@ -18,7 +19,7 @@ class NavigationBloc extends Bloc<NavigationEvent, NavigationState> {
   Widget getSelectedPage(int index) {
     switch (index) {
       case 0:
-        return Center(child: Text("0"));
+        return HomeView();
       case 1:
         return Center(child: Text("1"));
       case 2:
