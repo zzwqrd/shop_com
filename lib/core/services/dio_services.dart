@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:ali_com/core/utils/flash_helper.dart';
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -546,9 +547,18 @@ class DioServices {
     try {
       if (response.statusCode == 200 || response.statusCode == 201) {
         final data = response.data;
-
+        if ((data.toString().contains("DOCTYPE") ||
+            data.toString().contains("<script>") ||
+            data["exception"] != null)) {
+          _logger.red("Malformed or unexpected response received.");
+          FlashHelper.showToast(data['message']);
+          return HelperResponse<T>.malformedResponse(
+            statusCode: response.statusCode ?? 500,
+            message: 'Malformed or unexpected response',
+          );
+        }
         // Handle different response formats
-        if (data is Map<String, dynamic>) {
+        else if (data is Map<String, dynamic>) {
           return HelperResponse<T>.success(
             statusCode: response.statusCode!,
             message: data['message'] ?? 'Success',
@@ -573,6 +583,14 @@ class DioServices {
             data: data as T,
           );
         }
+      } else if ((response.data.toString().contains("DOCTYPE") ||
+          response.data.toString().contains("<script>") ||
+          response.data["exception"] != null)) {
+        _logger.red("Malformed or unexpected response received.");
+        return HelperResponse<T>.unknownError(
+          statusCode: response.statusCode ?? 500,
+          message: 'Malformed or unexpected response',
+        );
       } else if (response.statusCode == 204) {
         return HelperResponse<T>.success(
           statusCode: response.statusCode!,
@@ -662,6 +680,7 @@ class DioServices {
       switch (error.type) {
         case DioExceptionType.badResponse:
           if (error.response != null) {
+            FlashHelper.showToast(error.response!.data['message']);
             return _processResponse<T>(error.response!);
           }
           return HelperResponse<T>.unknownError(

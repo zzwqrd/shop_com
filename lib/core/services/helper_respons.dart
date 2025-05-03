@@ -37,7 +37,20 @@ class HelperResponse<T> {
         message: message,
         data: data,
       );
-
+  factory HelperResponse.malformedResponse({
+    int statusCode = 500,
+    String message = 'Malformed response',
+    T? data,
+    ErrorRequestType errorType = ErrorRequestType.malformedResponse,
+  }) =>
+      HelperResponse<T>(
+        state: ResponseState.badRequest,
+        statusCode: statusCode,
+        success: false,
+        message: message,
+        data: data,
+        errorType: errorType,
+      );
   factory HelperResponse.noInternet({
     int statusCode = 503,
     String message = 'No internet connection',
