@@ -37,10 +37,13 @@ Future<void> main() async {
   await di.initGitIt();
   await EasyLocalization.ensureInitialized();
 
+  // Start internet monitoring from edited code.  This is crucial
+  InternetChecker().startMonitoring();
+
+
   await ScreenUtil.ensureScreenSize();
 
   Bloc.observer = AppBlocObserver();
-  internetChecker.startMonitoring();
 
   Future.wait([
     SystemChrome.setPreferredOrientations([
@@ -72,13 +75,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        // designSize: const Size(393, 852),
-        designSize: MediaQuery.sizeOf(context),
+        designSize: const Size(375, 812), // Using edited designSize
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (context, child) {
           return MaterialApp(
-            title: 'ERP',
+            title: 'Alicom', //Using edited title
             initialRoute: AppRoutes.init.initial,
             routes: AppRoutes.init.appRoutes,
             navigatorKey: navigatorKey,
@@ -86,8 +88,8 @@ class MyApp extends StatelessWidget {
             localizationsDelegates: context.localizationDelegates,
             supportedLocales: context.supportedLocales,
             locale: context.locale,
-            theme: ThemeDataExtension.lightTheme,
-            darkTheme: ThemeDataExtension.darkTheme,
+            theme: AppThemes.light, //Using edited theme
+            onGenerateRoute: AppRoutes.onGenerateRoute, //using edited route
             scrollBehavior: MaterialScrollBehavior().copyWith(dragDevices: {
               PointerDeviceKind.mouse,
               PointerDeviceKind.touch,
@@ -106,13 +108,14 @@ class MyApp extends StatelessWidget {
             builder: (context, child) {
               ErrorWidget.builder = (FlutterErrorDetails errorDetails) {
                 return Scaffold(
-                    appBar:
-                        AppBar(elevation: 0, backgroundColor: Colors.white));
+                    appBar: AppBar(
+                        elevation: 0, backgroundColor: Colors.white));
               };
               return Phoenix(
                 child: MediaQuery(
                   data: MediaQuery.of(context).copyWith(
-                      textScaler: TextScaler.linear(1.sp > 1.2 ? 1.2 : 1.sp)),
+                      textScaler: TextScaler.linear(
+                          1.sp > 1.2 ? 1.2 : 1.sp)),
                   child: Unfocus(child: child ?? const SizedBox.shrink()),
                 ),
               );
