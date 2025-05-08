@@ -1,9 +1,15 @@
 
+enum OrderStatus {
+  current,
+  completed,
+  delivered
+}
+
 class Order {
   final String id;
   final String orderNumber;
   final DateTime orderDate;
-  final String status;
+  final OrderStatus status;
   final double total;
 
   Order({
@@ -19,7 +25,10 @@ class Order {
       id: json['id'],
       orderNumber: json['orderNumber'],
       orderDate: DateTime.parse(json['orderDate']),
-      status: json['status'],
+      status: OrderStatus.values.firstWhere(
+        (e) => e.toString() == 'OrderStatus.${json['status']}',
+        orElse: () => OrderStatus.current,
+      ),
       total: json['total'].toDouble(),
     );
   }
