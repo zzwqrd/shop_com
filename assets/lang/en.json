@@ -161,5 +161,18 @@
     "terms_conditions": "Terms & Conditions",
     "cookie_policy": "Cookie Policy",
     "disclaimer": "Disclaimer"
+  },
+  "orders": {
+    "title": "My Orders",
+    "order_number": "Order Number",
+    "order_date": "Order Date",
+    "order_status": "Status",
+    "order_total": "Total",
+    "view_details": "View Details",
+    "no_orders": "No Orders Found",
+    "pending": "Pending",
+    "processing": "Processing",
+    "completed": "Completed",
+    "cancelled": "Cancelled"
   }
 }

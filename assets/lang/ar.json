@@ -161,5 +161,18 @@
     "terms_conditions": "الشروط والأحكام",
     "cookie_policy": "سياسة ملفات تعريف الارتباط",
     "disclaimer": "إخلاء المسؤولية"
+  },
+  "orders": {
+    "title": "طلباتي",
+    "order_number": "رقم الطلب",
+    "order_date": "تاريخ الطلب",
+    "order_status": "حالة الطلب",
+    "order_total": "إجمالي الطلب",
+    "view_details": "عرض التفاصيل",
+    "no_orders": "لا توجد طلبات",
+    "pending": "قيد الانتظار",
+    "processing": "قيد المعالجة",
+    "completed": "مكتمل",
+    "cancelled": "ملغي"
   }
 }
