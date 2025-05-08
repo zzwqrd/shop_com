@@ -13,4 +13,5 @@ Future<void> initGitIt() async {
   sl.registerLazySingleton(() => NavigationBloc());
   sl.registerFactory(() => HomeController());
   sl.registerFactory(() => OrdersCubit());
+  sl.registerFactory(() => CheckoutCubit());
 }
