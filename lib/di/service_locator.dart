@@ -4,6 +4,7 @@ import '../features/auth/sign_in/controller/controller.dart';
 import '../features/home/controller/bloc.dart';
 import '../features/layout/controller/controller.dart';
 import '../features/splash/controller/controller.dart';
+import '../features/auth/register/controller/controller.dart'; // Added import
 
 final GetIt sl = GetIt.instance;
 
@@ -13,5 +14,5 @@ Future<void> initGitIt() async {
   sl.registerLazySingleton(() => NavigationBloc());
   sl.registerFactory(() => HomeController());
   sl.registerFactory(() => OrdersCubit());
-  sl.registerFactory(() => CheckoutCubit());
+  sl.registerFactory(() => RegisterController()); // Added registration
 }
