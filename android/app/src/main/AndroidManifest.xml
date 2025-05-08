@@ -14,7 +14,7 @@
     <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
 
     <application
-        android:label="ali_com"
+        android:label="Alicom"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
