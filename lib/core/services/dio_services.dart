@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:ali_com/core/utils/flash_helper.dart';
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -11,6 +10,7 @@ import '../../core/routes/app_routes_fun.dart';
 import '../../core/routes/routes.dart';
 import '../../core/utils/constant.dart';
 import '../../features/auth/sign_in/controller/model.dart';
+import '../utils/flash_helper.dart';
 import 'helper_respons.dart';
 import 'logger.dart';
 import 'logger_interceptor.dart';

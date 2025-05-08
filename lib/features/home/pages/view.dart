@@ -1,6 +1,6 @@
-import 'package:ali_com/commonWidget/CustomBlocBuilder.dart';
-import 'package:ali_com/features/home/controller/bloc.dart';
-import 'package:ali_com/features/home/controller/state.dart';
+import 'package:alicom/commonWidget/CustomBlocBuilder.dart';
+import 'package:alicom/features/home/controller/bloc.dart';
+import 'package:alicom/features/home/controller/state.dart';
 import 'package:flutter/material.dart';
 
 import '../../../di/service_locator.dart';

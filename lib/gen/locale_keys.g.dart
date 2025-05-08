@@ -2,14 +2,11 @@
 
 // ignore_for_file: constant_identifier_names
 
-abstract class LocaleKeys {
+abstract class  LocaleKeys {
   static const server_gate_lang = 'server_gate.lang';
-  static const server_gate_something_went_wrong_please_try_again =
-      'server_gate.something_went_wrong_please_try_again';
-  static const server_gate_poor_connection_check_the_quality_of_the_internet =
-      'server_gate.poor_connection_check_the_quality_of_the_internet';
-  static const server_gate_please_check_your_internet_connection =
-      'server_gate.please_check_your_internet_connection';
+  static const server_gate_something_went_wrong_please_try_again = 'server_gate.something_went_wrong_please_try_again';
+  static const server_gate_poor_connection_check_the_quality_of_the_internet = 'server_gate.poor_connection_check_the_quality_of_the_internet';
+  static const server_gate_please_check_your_internet_connection = 'server_gate.please_check_your_internet_connection';
   static const server_gate = 'server_gate';
   static const home_title = 'home.title';
   static const home_explore_now = 'home.explore_now';
@@ -32,8 +29,7 @@ abstract class LocaleKeys {
   static const search_no_results_found = 'search.no_results_found';
   static const search_try_another_keyword = 'search.try_another_keyword';
   static const search = 'search';
-  static const propertyDetails_property_details =
-      'propertyDetails.property_details';
+  static const propertyDetails_property_details = 'propertyDetails.property_details';
   static const propertyDetails_description = 'propertyDetails.description';
   static const propertyDetails_price = 'propertyDetails.price';
   static const propertyDetails_location = 'propertyDetails.location';
@@ -43,12 +39,9 @@ abstract class LocaleKeys {
   static const propertyDetails_amenities = 'propertyDetails.amenities';
   static const propertyDetails_furnished = 'propertyDetails.furnished';
   static const propertyDetails_not_furnished = 'propertyDetails.not_furnished';
-  static const propertyDetails_contact_seller =
-      'propertyDetails.contact_seller';
-  static const propertyDetails_add_to_favorites =
-      'propertyDetails.add_to_favorites';
-  static const propertyDetails_remove_from_favorites =
-      'propertyDetails.remove_from_favorites';
+  static const propertyDetails_contact_seller = 'propertyDetails.contact_seller';
+  static const propertyDetails_add_to_favorites = 'propertyDetails.add_to_favorites';
+  static const propertyDetails_remove_from_favorites = 'propertyDetails.remove_from_favorites';
   static const propertyDetails = 'propertyDetails';
   static const favorites_title = 'favorites.title';
   static const favorites_empty_favorites = 'favorites.empty_favorites';
@@ -67,8 +60,7 @@ abstract class LocaleKeys {
   static const settings_change_language = 'settings.change_language';
   static const settings_notifications = 'settings.notifications';
   static const settings_enable_notifications = 'settings.enable_notifications';
-  static const settings_disable_notifications =
-      'settings.disable_notifications';
+  static const settings_disable_notifications = 'settings.disable_notifications';
   static const settings_dark_mode = 'settings.dark_mode';
   static const settings_light_mode = 'settings.light_mode';
   static const settings_privacy_policy = 'settings.privacy_policy';
@@ -92,8 +84,7 @@ abstract class LocaleKeys {
   static const auth_name_placeholder = 'auth.name_placeholder';
   static const auth_email_placeholder = 'auth.email_placeholder';
   static const auth_password_placeholder = 'auth.password_placeholder';
-  static const auth_confirm_password_placeholder =
-      'auth.confirm_password_placeholder';
+  static const auth_confirm_password_placeholder = 'auth.confirm_password_placeholder';
   static const auth_phone_placeholder = 'auth.phone_placeholder';
   static const auth_terms_conditions = 'auth.terms_conditions';
   static const auth_terms_conditions_link = 'auth.terms_conditions_link';
@@ -104,59 +95,45 @@ abstract class LocaleKeys {
   static const auth_name_required_error = 'auth.name_required_error';
   static const auth_email_required_error = 'auth.email_required_error';
   static const auth_password_required_error = 'auth.password_required_error';
-  static const auth_confirm_password_required_error =
-      'auth.confirm_password_required_error';
+  static const auth_confirm_password_required_error = 'auth.confirm_password_required_error';
   static const auth_phone_required_error = 'auth.phone_required_error';
   static const auth_passwords_mismatch_error = 'auth.passwords_mismatch_error';
-  static const auth_account_created_successfully =
-      'auth.account_created_successfully';
+  static const auth_account_created_successfully = 'auth.account_created_successfully';
   static const auth = 'auth';
   static const resetPassword_title = 'resetPassword.title';
   static const resetPassword_subtitle = 'resetPassword.subtitle';
-  static const resetPassword_email_placeholder =
-      'resetPassword.email_placeholder';
+  static const resetPassword_email_placeholder = 'resetPassword.email_placeholder';
   static const resetPassword_send_reset_link = 'resetPassword.send_reset_link';
   static const resetPassword_back_to_login = 'resetPassword.back_to_login';
   static const resetPassword_reset_link_sent = 'resetPassword.reset_link_sent';
   static const resetPassword_email_not_found = 'resetPassword.email_not_found';
   static const resetPassword = 'resetPassword';
-  static const notifications_new_property_added =
-      'notifications.new_property_added';
+  static const notifications_new_property_added = 'notifications.new_property_added';
   static const notifications_promotion_alert = 'notifications.promotion_alert';
   static const notifications_order_confirmed = 'notifications.order_confirmed';
   static const notifications_property_sold = 'notifications.property_sold';
-  static const notifications_property_reserved =
-      'notifications.property_reserved';
-  static const notifications_property_available =
-      'notifications.property_available';
+  static const notifications_property_reserved = 'notifications.property_reserved';
+  static const notifications_property_available = 'notifications.property_available';
   static const notifications = 'notifications';
   static const errors_invalid_email = 'errors.invalid_email';
   static const errors_password_too_short = 'errors.password_too_short';
   static const errors_invalid_credentials = 'errors.invalid_credentials';
   static const errors_network_error = 'errors.network_error';
-  static const errors_check_internet_connection =
-      'errors.check_internet_connection';
+  static const errors_check_internet_connection = 'errors.check_internet_connection';
   static const errors_something_went_wrong = 'errors.something_went_wrong';
   static const errors_server_error = 'errors.server_error';
   static const errors_timeout_error = 'errors.timeout_error';
   static const errors_unknown_error = 'errors.unknown_error';
   static const errors = 'errors';
-  static const propertyListing_list_your_property =
-      'propertyListing.list_your_property';
+  static const propertyListing_list_your_property = 'propertyListing.list_your_property';
   static const propertyListing_property_type = 'propertyListing.property_type';
-  static const propertyListing_property_location =
-      'propertyListing.property_location';
-  static const propertyListing_property_price =
-      'propertyListing.property_price';
-  static const propertyListing_property_description =
-      'propertyListing.property_description';
+  static const propertyListing_property_location = 'propertyListing.property_location';
+  static const propertyListing_property_price = 'propertyListing.property_price';
+  static const propertyListing_property_description = 'propertyListing.property_description';
   static const propertyListing_upload_photos = 'propertyListing.upload_photos';
-  static const propertyListing_submit_listing =
-      'propertyListing.submit_listing';
-  static const propertyListing_listing_submitted =
-      'propertyListing.listing_submitted';
-  static const propertyListing_listing_failed =
-      'propertyListing.listing_failed';
+  static const propertyListing_submit_listing = 'propertyListing.submit_listing';
+  static const propertyListing_listing_submitted = 'propertyListing.listing_submitted';
+  static const propertyListing_listing_failed = 'propertyListing.listing_failed';
   static const propertyListing = 'propertyListing';
   static const contactUs_title = 'contactUs.title';
   static const contactUs_message_placeholder = 'contactUs.message_placeholder';
@@ -174,4 +151,17 @@ abstract class LocaleKeys {
   static const legal_cookie_policy = 'legal.cookie_policy';
   static const legal_disclaimer = 'legal.disclaimer';
   static const legal = 'legal';
+  static const orders_title = 'orders.title';
+  static const orders_order_number = 'orders.order_number';
+  static const orders_order_date = 'orders.order_date';
+  static const orders_order_status = 'orders.order_status';
+  static const orders_order_total = 'orders.order_total';
+  static const orders_view_details = 'orders.view_details';
+  static const orders_no_orders = 'orders.no_orders';
+  static const orders_pending = 'orders.pending';
+  static const orders_processing = 'orders.processing';
+  static const orders_completed = 'orders.completed';
+  static const orders_cancelled = 'orders.cancelled';
+  static const orders = 'orders';
+
 }

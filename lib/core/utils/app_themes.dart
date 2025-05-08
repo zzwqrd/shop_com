@@ -21,7 +21,7 @@ extension ThemeDataExtension on ThemeData {
         hintColor: AppColors.greyColor,
         primaryColorLight: AppColors.whiteColor,
         primaryColorDark: AppColors.blackColor,
-        dialogTheme: DialogTheme(
+        dialogTheme: DialogThemeData(
           elevation: 0,
           backgroundColor: AppColors.whiteColor,
           insetPadding: EdgeInsets.symmetric(horizontal: 22.w, vertical: 24.h),
@@ -125,7 +125,7 @@ extension ThemeDataExtension on ThemeData {
         hintColor: AppColors.darkGreyColor,
         primaryColorLight: AppColors.darkSecondaryColor,
         primaryColorDark: AppColors.darkTextColor,
-        dialogTheme: DialogTheme(
+        dialogTheme: DialogThemeData(
           elevation: 0,
           backgroundColor: AppColors.darkScaffoldBackgroundColor,
           insetPadding: EdgeInsets.symmetric(horizontal: 22.w, vertical: 24.h),

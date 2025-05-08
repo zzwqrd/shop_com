@@ -1,3 +1,4 @@
+import '../../../../core/utils/enums.dart';
 
 class RegisterState {
   final RequestState requestState;

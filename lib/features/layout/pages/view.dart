@@ -47,7 +47,7 @@ class _LayoutViewState extends State<LayoutView> {
                   isSearch: true,
                   svgIcon: Assets.icons.search,
                   onTap: () {
-                    // push(NamedRoutes.i.error);
+                    // push(NamedRoutes.error);
                   },
                 ),
               ),

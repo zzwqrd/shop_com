@@ -1,14 +1,12 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../commonWidget/app_btn.dart';
 import '../../../commonWidget/app_field.dart';
+import '../../auth/sign_in/widgets/w.dart' show AppButton;
 import '../controller/controller.dart';
-import '../controller/model.dart';
 import '../controller/state.dart';
 
 class CheckoutPage extends StatelessWidget {
-  const CheckoutPage({Key? key}) : super(key: key);
+  const CheckoutPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,10 +33,8 @@ class CheckoutPage extends StatelessWidget {
                   _OrderSummary(),
                   SizedBox(height: 20),
                   AppButton(
-                    text: 'إتمام الطلب',
-                    onPress: () {
-                      // TODO: Implement checkout
-                    },
+                    type: 'إتمام الطلب',
+                    onTap: () {},
                   ),
                 ],
               ),
@@ -59,21 +55,22 @@ class _AddressForm extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('عنوان التوصيل', style: Theme.of(context).textTheme.titleLarge),
+            Text('عنوان التوصيل',
+                style: Theme.of(context).textTheme.titleLarge),
             SizedBox(height: 16),
-            AppTextField(
-              hint: 'الاسم',
-              prefix: Icon(Icons.person),
+            AppCustomForm(
+              hintText: 'الاسم',
+              prefixIcon: Icon(Icons.person),
             ),
             SizedBox(height: 12),
-            AppTextField(
-              hint: 'رقم الهاتف',
-              prefix: Icon(Icons.phone),
+            AppCustomForm(
+              hintText: 'رقم الهاتف',
+              prefixIcon: Icon(Icons.phone),
             ),
             SizedBox(height: 12),
-            AppTextField(
-              hint: 'العنوان',
-              prefix: Icon(Icons.location_on),
+            AppCustomForm(
+              hintText: 'العنوان',
+              prefixIcon: Icon(Icons.location_on),
             ),
           ],
         ),
@@ -133,12 +130,14 @@ class _OrderSummary extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(title, style: TextStyle(
-            fontWeight: isTotal ? FontWeight.bold : FontWeight.normal,
-          )),
-          Text(value, style: TextStyle(
-            fontWeight: isTotal ? FontWeight.bold : FontWeight.normal,
-          )),
+          Text(title,
+              style: TextStyle(
+                fontWeight: isTotal ? FontWeight.bold : FontWeight.normal,
+              )),
+          Text(value,
+              style: TextStyle(
+                fontWeight: isTotal ? FontWeight.bold : FontWeight.normal,
+              )),
         ],
       ),
     );

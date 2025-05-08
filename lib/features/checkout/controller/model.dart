@@ -1,4 +1,3 @@
-
 class CheckoutModel {
   final String id;
   final double subtotal;

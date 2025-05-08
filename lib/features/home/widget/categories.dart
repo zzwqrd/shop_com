@@ -1,4 +1,4 @@
-import 'package:ali_com/core/utils/extensions.dart';
+import 'package:alicom/core/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

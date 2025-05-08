@@ -1,4 +1,3 @@
-
 class RegisterModel {
   final String name;
   final String email;

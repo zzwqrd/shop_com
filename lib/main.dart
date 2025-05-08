@@ -14,7 +14,6 @@ import 'config/internet_checker.dart';
 import 'core/routes/app_routes.dart';
 import 'core/routes/app_routes_fun.dart';
 import 'core/services/bloc_observer.dart';
-import 'core/utils/app_themes.dart';
 import 'core/utils/loger.dart';
 import 'core/utils/phoneix.dart';
 import 'core/utils/unfucs.dart';
@@ -39,7 +38,6 @@ Future<void> main() async {
 
   // Start internet monitoring from edited code.  This is crucial
   InternetChecker().startMonitoring();
-
 
   await ScreenUtil.ensureScreenSize();
 
@@ -88,8 +86,8 @@ class MyApp extends StatelessWidget {
             localizationsDelegates: context.localizationDelegates,
             supportedLocales: context.supportedLocales,
             locale: context.locale,
-            theme: AppThemes.light, //Using edited theme
-            onGenerateRoute: AppRoutes.onGenerateRoute, //using edited route
+            // theme: AppThemes.light, //Using edited theme
+            // onGenerateRoute: AppRoutes.onGenerateRoute, //using edited route
             scrollBehavior: MaterialScrollBehavior().copyWith(dragDevices: {
               PointerDeviceKind.mouse,
               PointerDeviceKind.touch,
@@ -108,14 +106,13 @@ class MyApp extends StatelessWidget {
             builder: (context, child) {
               ErrorWidget.builder = (FlutterErrorDetails errorDetails) {
                 return Scaffold(
-                    appBar: AppBar(
-                        elevation: 0, backgroundColor: Colors.white));
+                    appBar:
+                        AppBar(elevation: 0, backgroundColor: Colors.white));
               };
               return Phoenix(
                 child: MediaQuery(
                   data: MediaQuery.of(context).copyWith(
-                      textScaler: TextScaler.linear(
-                          1.sp > 1.2 ? 1.2 : 1.sp)),
+                      textScaler: TextScaler.linear(1.sp > 1.2 ? 1.2 : 1.sp)),
                   child: Unfocus(child: child ?? const SizedBox.shrink()),
                 ),
               );

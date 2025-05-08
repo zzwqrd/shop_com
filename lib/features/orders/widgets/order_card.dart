@@ -1,13 +1,13 @@
-
-import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+
 import '../../../gen/locale_keys.g.dart';
 import '../controller/model.dart';
 
 class OrderCard extends StatelessWidget {
   final Order order;
 
-  const OrderCard({Key? key, required this.order}) : super(key: key);
+  const OrderCard({super.key, required this.order});
 
   @override
   Widget build(BuildContext context) {
@@ -41,9 +41,7 @@ class OrderCard extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {
-                  // TODO: Implement order details navigation
-                },
+                onPressed: () {},
                 child: Text(LocaleKeys.orders_view_details.tr()),
               ),
             ),
@@ -57,11 +55,11 @@ class OrderCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: _getStatusColor(order.status),
+        color: _getStatusColor(order.status.name),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Text(
-        order.status.tr(),
+        order.status.name.tr(),
         style: const TextStyle(color: Colors.white),
       ),
     );

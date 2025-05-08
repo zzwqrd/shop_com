@@ -1,6 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../config/internet_checker.dart';
 import '../../../core/routes/app_routes_fun.dart';
 import '../../../core/routes/routes.dart';
 import '../../../core/utils/flash_helper.dart';
@@ -8,22 +7,13 @@ import '../../auth/sign_in/controller/model.dart';
 
 class SplashController extends Cubit<SplashState> {
   SplashController() : super(SplashInitial()) {
-    InternetChecker().startMonitoring();
+    // InternetChecker().startMonitoring();
     _initializeApp();
   }
 
   Future<void> _initializeApp() async {
     emit(SplashLoadingState());
     try {
-      final hasConnection = await InternetChecker().hasInternet();
-      if (!hasConnection) {
-        emit(InternetNotAvailableState());
-        FlashHelper.showToast("No Internet", type: MessageTypeTost.warning);
-
-        // pushAndRemoveUntil(NamedRoutes.i.internet);
-        return;
-      }
-
       // Attempt to load user data
       final userLoaded = await _loadUserData();
       if (!userLoaded) {
@@ -37,7 +27,7 @@ class SplashController extends Cubit<SplashState> {
       if (UserModel.instance.isAuth) {
         pushAndRemoveUntil(NamedRoutes.i.layout);
       } else {
-        pushAndRemoveUntil(NamedRoutes.i.login);
+        pushAndRemoveUntil(NamedRoutes.i.layout);
       }
 
       emit(UserLoadedState(isAuthenticated: UserModel.instance.isAuth));

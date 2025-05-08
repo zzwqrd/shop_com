@@ -1,7 +1,7 @@
-import 'package:ali_com/core/services/dio_services.dart';
-import 'package:ali_com/core/services/helper_respons.dart';
-import 'package:ali_com/core/utils/flash_helper.dart';
-import 'package:ali_com/features/home/controller/state.dart';
+import 'package:alicom/core/services/dio_services.dart';
+import 'package:alicom/core/services/helper_respons.dart';
+import 'package:alicom/core/utils/flash_helper.dart';
+import 'package:alicom/features/home/controller/state.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,6 +17,7 @@ class HomeController extends Cubit<HomeState> {
   List<Banners> banners = [];
   List<Category> categories = [];
   List<Ads> ads = [];
+  List<Product> products = [];
 
   Future<void> getData() async {
     emit(state.copyWith(requestState: RequestState.loading));
@@ -34,6 +35,7 @@ class HomeController extends Cubit<HomeState> {
         banners = success.data!.banners;
         categories = success.data!.categories;
         ads = success.data!.ads;
+        products = success.data!.justForYou!.products;
 
         if (banners.isEmpty) {
           emit(state.copyWith(
@@ -54,11 +56,11 @@ class HomeController extends Cubit<HomeState> {
 
   Future<Either<HelperResponse, HomeModel>> data() async {
     final response = await DioServices.instance.get(AppConstants.home);
-    return response.toEitherWithMapper((data) {
-      return HomeModel.fromJson(data);
-    });
-    // return response.toEither().map((data) {
+    // return response.toEitherWithMapper((data) {
     //   return HomeModel.fromJson(data);
     // });
+    return response.toEither().map((data) {
+      return HomeModel.fromJson(data);
+    });
   }
 }

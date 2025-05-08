@@ -1,13 +1,9 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../commonWidget/custom_image.dart';
-import '../../../config/internet_checker.dart';
-import '../../../core/routes/app_routes_fun.dart';
-import '../../../core/routes/routes.dart';
-import '../../../core/utils/flash_helper.dart';
+import '../../../di/service_locator.dart';
 import '../../../gen/assets/generated_assets.dart';
-import '../controller/controller.dart';
+import '../controller/controller.dart' show SplashController;
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -19,33 +15,17 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
+    sl<SplashController>().retryInitialization;
     super.initState();
-    _checkInternetAndNavigate();
-  }
-
-  Future<void> _checkInternetAndNavigate() async {
-    final hasInternet = await InternetChecker().hasInternet();
-    if (!hasInternet) {
-      FlashHelper.showToast('يرجى التحقق من اتصال الإنترنت', type: MessageTypeTost.fail);
-      return;
-    }
-    // Add delay for splash screen visibility
-    await Future.delayed(const Duration(seconds: 2));
-    if (mounted) {
-      pushAndRemoveUntil(NamedRoutes.i.layout);
-    }
   }
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => SplashController(),
-      child: Scaffold(
-        body: Center(
-          child: CustomImage(
-            Assets.icons.appLogo,
-            width: 200,
-          ),
+    return Scaffold(
+      body: Center(
+        child: CustomImage(
+          Assets.icons.appLogo,
+          width: 200,
         ),
       ),
     );
