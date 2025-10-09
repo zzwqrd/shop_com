@@ -6,7 +6,6 @@
 # هذا الأمر يقوم بتوليد ملفات Dart الخاصة بالأصول تلقائياً من مجلد الأصول لديك.
 dart run lib/core/utils/assets_generator.dart
 
-
 # 🌐 توليد مفاتيح الترجمة (Localization Keys)
 # هذا الأمر يقوم بتوليد ملف مفاتيح الترجمة تلقائياً من ملفات اللغات.
 flutter pub run easy_localization:generate -S assets/lang -f keys -O lib/gen -o locale_keys.g.dart

@@ -36,8 +36,6 @@ Future<void> main() async {
   await di.initGitIt();
   await EasyLocalization.ensureInitialized();
 
-  // Start internet monitoring from edited code.  This is crucial
-  InternetChecker().startMonitoring();
 
   await ScreenUtil.ensureScreenSize();
 
